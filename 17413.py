@@ -1,26 +1,20 @@
-string, tmp, result = input(), '', ''
-
-tag = False
-
-for i in string:
-    if i == '<':
-        tag = True
-        result += tmp[::-1] + "<"
-        tmp = ''
-    elif i == '>':
-        tag = False
-        result += '>'
-    elif i == ' ':
-        if tag:
-            result += ' '
-        else:
-            result += tmp[::-1] + ' '
-            tmp = ''
-    else:
-        if tag:
-            result += i
-        else:
-            tmp += i
-result += tmp[::-1]
-
-print(result)
+import sys
+lines = sys.stdin.readlines()
+for line in lines[:-1]:
+    stack = []
+    for t in line:
+        if t in '([':
+            stack.append(t)
+        elif t == "]":
+            if not stack or stack.pop() != '[':
+                print('no')
+                break
+        elif t == ')':
+            if not stack or stack.pop() != '(':
+                print('no')
+                break
+        elif t == '.':
+            if stack:
+                print('no')
+            else:
+                print("yes")

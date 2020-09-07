@@ -1,10 +1,16 @@
+import sys
 n = int(input())
-stack = []
 res = []
-for i in range(n):
-    tmp = int(input())
-    if stack == []:
-        stack.append(tmp)
-    while stack[-1] < tmp:
-        stack.pop()
-        stack.append(tmp)
+for _ in range(n):
+    res.append(int(sys.stdin.readline()))
+
+
+def sol():
+    stack = []
+    for s in res[::-1]:
+        if not stack or stack[-1] < s:
+            stack.append(s)
+    return len(stack)
+
+
+print(sol())

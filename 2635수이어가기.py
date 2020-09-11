@@ -1,13 +1,18 @@
 n = int(input())
-
-for i in range(1, n+2):
-    lst = []
-    lst = [n, i]
+max_l = 0
+max_lst = []
+for i in range(n+1):
+    result = [n, i]
     j = 0
-    while True :
-        a = lst[j] - lst[j+1]
-        if a < 0:
+    while True:
+        a = result[j] - result[j+1]
+        if a <= -1:
             break
-        lst.append(a)
+        result.append(a)
+        if max_l < len(result):
+            max_l = len(result)
+            max_lst = result[:]
         j += 1
-print(lst)
+print(max_l)
+for i in max_lst:
+    print(i , end= " ")

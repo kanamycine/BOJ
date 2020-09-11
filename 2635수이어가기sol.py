@@ -16,4 +16,3 @@ for i in range(N+1):
 print(max_l)
 for e in max_list:
     print(e, end=" ")
-print()

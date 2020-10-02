@@ -17,4 +17,4 @@ res = 0
 for i in range(N):
     res += check1[i] * check2[-i-1]
 print(res)
-##gkrltlfgek.
+##gkrltlfge   

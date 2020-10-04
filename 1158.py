@@ -12,3 +12,4 @@ for i in range(N-1):
 
 ans += [q[0]]
 print('<'+', '.join(map(str, ans)) + '>')
+#

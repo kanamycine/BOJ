@@ -13,3 +13,4 @@ if month != 1:
 elif month == 1:
     Jan_daily = day % 7
     print(day_list[Jan_daily])
+#

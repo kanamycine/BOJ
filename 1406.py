@@ -18,5 +18,6 @@ for i in range(b):
     
     
 left += right[::-1]
-print(''.join(left))    
+print(''.join(left))  
+#  
 

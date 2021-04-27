@@ -1,4 +1,5 @@
 n = int(input())
+n = int(input())
 a = [int(input()) for _ in range(n)]
 lst = []
 for i in range(n):

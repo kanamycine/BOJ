@@ -8,4 +8,4 @@ while n > cnt:
     count += 1
     cnt += pls
     pls += 6
-print(count)
+print(count)  #

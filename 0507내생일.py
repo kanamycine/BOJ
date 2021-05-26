@@ -6,3 +6,4 @@ for i in range(t):
     avg = sum(scores)/n
     cnt = len([s for s in scores if s > avg])
     print("%.3f" % (100*cnt/n), end='%\n')
+#

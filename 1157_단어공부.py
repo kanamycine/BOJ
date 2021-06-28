@@ -12,3 +12,4 @@ elif char_list[tmp[-1]] == char_list[tmp[-2]]:
     print("?")
 else:
     print(f"{tmp[-1].upper()}")
+#

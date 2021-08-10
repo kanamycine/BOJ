@@ -1,9 +1,13 @@
-import sys
-N = int(input())
-cnt_list = [0] * 10001
+from sys import stdin as st
 
-for i in range(N):
-    cnt_list[int(input())] += 1
+n = int(st.readline())
+arr = [0] * 10001
+
+for i in range(n):
+    num = int(st.readline())
+    arr[num] += 1
 
 for i in range(10001):
-    sys.stdout.write('%s\n' % i * cnt_list[i])
+    while arr[i]:
+        print(i)
+        arr[i] -= 1

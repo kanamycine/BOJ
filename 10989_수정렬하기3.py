@@ -11,4 +11,3 @@ for i in range(10001):
     while arr[i]:
         print(i)
         arr[i] -= 1
-#

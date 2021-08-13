@@ -1,7 +1,7 @@
 n = int(input())
-lst = []
+num = []
 for i in range(n):
-    lst.append(int(input()))
-
-for i in sorted(lst):
+    num.append(int(input()))
+num = sorted(num)
+for i in num:
     print(i)

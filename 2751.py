@@ -5,4 +5,4 @@ for i in range(n):
 num = sorted(num)
 for i in num:
     print(i)
-    
+    #

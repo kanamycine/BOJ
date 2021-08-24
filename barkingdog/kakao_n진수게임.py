@@ -1,6 +1,4 @@
-n, t, m, p = map(str, input().split())
-
-
+n, t, m, p = map(int, input().split())
 res = ''
 full_res = []
 def change(n, b):
@@ -19,3 +17,4 @@ for i in range(t*m):
 for i in range(p-1, t*m, m):
     res += full_res[i]
 
+print(res)

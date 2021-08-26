@@ -17,4 +17,4 @@ for i in range(t*m):
 for i in range(p-1, t*m, m):
     res += full_res[i]
 
-print(res)
+print(res) #

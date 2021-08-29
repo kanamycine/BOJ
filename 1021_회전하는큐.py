@@ -18,6 +18,6 @@ for i in range(B):
                 cnt += 1
             else:
                 cq.insert(0, cq[-1])
-                del cq[-1] #
+                del cq[-1] 
                 cnt += 1
 print(res)

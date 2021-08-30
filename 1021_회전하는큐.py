@@ -15,7 +15,7 @@ for i in range(B):
             if cq.index(lst[i]) - len(cq)//2 <= 0:
                 cq.append(cq[0])
                 del cq[0]
-                cnt += 1#
+                cnt += 1
             else:
                 cq.insert(0, cq[-1])
                 del cq[-1] 

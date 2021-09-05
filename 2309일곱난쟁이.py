@@ -11,4 +11,4 @@ for i in range(0,n):
                 if i==k or j==k:
                     continue
                 print(lst[k]) # i와 k는 건너뛰고 출력해야지 ? gg
-            sys.exit(0)
+            sys.exit(0)#

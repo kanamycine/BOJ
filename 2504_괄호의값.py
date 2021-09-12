@@ -1,50 +1,57 @@
-str = input()
-stk = []
-tmp = 0
-res = 0
-for i in str:
-    print(stk)
-    if len(stk) == 0:
-        res += tmp
-    if i == "(" or i == "[":
+def do_or_die():
+    stk = []
+    for i in s:
+        if i == ")" or i == "]":
+            if len(stk) == 0:
+                return False
+        if i == "(" or i == "[":
             stk.append(i)
-    elif i == ")":
-        if stk[-1] == "(":
-            del stk[-1]
-            if tmp == 0:
+        if i == ")":
+            if stk[-1] == "(":
+                stk.pop()
+            else: 
+                stk.append(")")
+        elif i == "]":
+            if stk[-1] == "[":
+                stk.pop()
+            else: 
+                stk.append("]")
+    if stk:
+        return False
+    else :
+        return True
+
+s = input()
+stk = []
+tmp = 1
+if do_or_die():
+    for i in s:
+        if i == "(" or i == "[":
+            stk.append(i)
+        if i == ")":
+            if stk[-1] == "(":
+                stk.pop()
                 stk.append(2)
-            else:
+            elif isinstance(stk[-1], int):
+                tmp *= stk[-1]
+                stk.pop()
+                while stk[-1] != "(":
+                    tmp += stk.pop()
+                stk.pop()
                 stk.append(tmp * 2)
-                del stk[-1]
-                stk.append(tmp)
-                tmp = 0
-        else: 
-            while(stk[-1] != "("):
-                if tmp == 0:
-                    tmp += stk[-1]
-                    del stk[-1]
-                else: 
-                    tmp *= stk[-1]
-                    del stk[-1]
-                    stk.append(tmp)
-    elif i == "]":
-        if stk[-1] == "[":
-            del stk[-1]
-            if tmp == 0 :
+            tmp = 1
+        if i == "]":
+            if stk[-1] == "[":
+                stk.pop()
                 stk.append(3)
-            else:
+            elif isinstance(stk[-1], int):
+                tmp *= stk[-1]
+                stk.pop()
+                while stk[-1] != "[":
+                    tmp += stk.pop()
+                stk.pop()
                 stk.append(tmp * 3)
-                del stk[-1]
-                stk.append(tmp)
-                tmp = 0
-        else:
-            while(stk[-1] != "["):
-                if tmp == 0:
-                    tmp += stk[-1]
-                    del stk[-1]
-                    stk.append(tmp)
-                else: 
-                    tmp *= stk[-1]
-                    del stk[-1]
-                    stk.append(tmp)
-print(stk)
+            tmp = 1
+    print(sum(stk))
+else:
+    print(0)

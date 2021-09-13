@@ -54,4 +54,4 @@ if do_or_die():
             tmp = 1
     print(sum(stk))
 else:
-    print(0)
+    print(0)#

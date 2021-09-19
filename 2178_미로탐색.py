@@ -36,4 +36,4 @@ print(arr[A-1][B-1])
 #         y = b + dy[i]
 #         if 0 <= x < A and 0 <= y < B and arr[x][y] == "1":
 #             que.append([x, y])
-#             arr[x][y] = arr[a][b] + 1
+#             arr[x][y] = arr[a][b] + 1 #
